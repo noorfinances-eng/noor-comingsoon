@@ -1,14 +1,21 @@
 export default function Home() {
   return (
     <main style={styles.wrap}>
-      <h1 style={styles.title}>NOOR</h1>
+      <div style={styles.center}>
+        <h1 style={styles.title}>NOOR</h1>
+        <p style={styles.subtitle}>Coming Soon</p>
+      </div>
 
       <style jsx>{`
         main::before {
           content: "";
           position: absolute;
           inset: 0;
-          background: radial-gradient(50% 40% at 50% 30%, rgba(245,196,66,0.15), transparent 60%);
+          background: radial-gradient(
+            60% 40% at 50% 30%,
+            rgba(245, 196, 66, 0.12),
+            transparent 60%
+          );
           pointer-events: none;
         }
       `}</style>
@@ -24,15 +31,29 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    flexDirection: "column",
     fontFamily:
       "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial",
-    position: "relative",
     margin: 0,
+    textAlign: "center",
+    position: "relative",
+  },
+  center: {
+    position: "relative",
+    zIndex: 10,
   },
   title: {
     fontSize: "6rem",
     fontWeight: 800,
     letterSpacing: "-0.04em",
-    textShadow: "0 0 12px rgba(245,196,66,0.25)",
+    textShadow: "0 0 20px rgba(245,196,66,0.25)",
+    margin: 0,
+  },
+  subtitle: {
+    marginTop: "1rem",
+    fontSize: "1.5rem",
+    color: "rgba(245,196,66,0.75)",
+    fontWeight: 400,
+    letterSpacing: "0.1em",
   },
 };
