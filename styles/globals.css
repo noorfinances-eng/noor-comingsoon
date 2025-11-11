@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Police système propre */
+html, body { height: 100%; }
+body {
+  background-color: theme(colors.night);
+  color: white;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Petits utilitaires */
+.badge {
+  @apply inline-flex items-center rounded-full border border-yellow-500/40 px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-yellow-300;
+}
+.btn-gold {
+  @apply inline-flex items-center justify-center rounded-xl bg-gold/10 px-4 py-2 text-sm font-medium text-gold ring-1 ring-inset ring-gold/40 hover:bg-gold/20 transition-colors;
+}
+.card {
+  @apply rounded-2xl border border-white/10 bg-black/40 shadow-glow;
+}
